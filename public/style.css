@@ -1,0 +1,268 @@
+body {
+  margin: 0px;
+}
+
+header,
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+main {
+  min-height: 500px;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-image: url("background_MET.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+  text-align: center;
+}
+
+#filtro {
+  text-align: center;
+}
+
+#filtro form {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px 15px;
+  border-radius: 25px;
+  display: inline-flex;
+  text-align: left;
+  margin: 20px;
+}
+
+.divFiltro {
+  background-color: #aaaaaa;
+  border-radius: 10px;
+  border: 2px grey;
+  border-style: solid;
+  display: inline-block;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 0px;
+}
+
+.divFiltro input,
+.divFiltro select {
+  border: none;
+}
+
+.buttonFiltro {
+  background-color: #aaaaaa;
+  border-radius: 10px;
+  border: 2px grey;
+  border-style: solid;
+  display: inline-block;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  margin: 10px;
+  color: white;
+  padding: 15px 30px;
+  font-size: 14px;
+}
+
+.contenedor {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px 15px;
+  border-radius: 25px;
+  margin-inline: 100px;
+  text-align: center;
+  display: inline-block;
+}
+
+strong {
+  font-size: large;
+}
+
+#grilla {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  margin-inline: 30px;
+  text-align: center;
+}
+
+.card {
+  background-color: rgb(211, 192, 173);
+  width: 250px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  align-content: flex-end;
+}
+
+.divCard {
+  width: 250px;
+  height: 250px;
+  align-content: center;
+}
+
+#grilla img,
+#unaImagen img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+.divDatos {
+  background-color: #aaaaaa;
+  border-radius: 10px;
+  border: 2px grey;
+  border-style: solid;
+  display: inline-block;
+  text-align: center;
+  width: 220px;
+  margin: 10px;
+  padding: 0px;
+}
+
+.identificador {
+  margin: 0px;
+  font-size: 10px;
+  padding: 1px;
+}
+
+.valor {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 0px;
+  font-size: large;
+  background-color: #fefefe;
+  padding: 7px;
+  font-size: 14px;
+}
+
+#paginas {
+  text-align: center;
+  padding: 15px;
+}
+
+.button {
+  background-color: #aaaaaa;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.pagSelec {
+  background-color: aliceblue;
+  color: black;
+  border: 2px inset black;
+  margin-inline: 5px;
+}
+
+.buttonFiltro:hover,
+.button:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+.noFunc:hover,
+.noFunc {
+  background-color: aliceblue;
+  color: grey;
+}
+
+
+
+/*/////////----- ESTILO DEL MODAL -----//////////////////*/
+/* BACKGROUND del MODAL */
+.modal {
+  display: none; /*Por defecto está oculpa*/
+  position: fixed;
+  z-index: 1;
+  align-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* CONTENIDO del modal */
+.modal-cont {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 700px;
+  height: 80%;
+  align-content: center;
+  text-align: center;
+}
+
+/* CONTENEDOR de la imagen principal */
+#imgPrincipal {
+  height: 70%;
+  margin: auto;
+  margin-bottom: 20px;
+  align-content: center;
+}
+
+/* IMAGEN principal */
+#imgPrincipal img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* CONTENEDOR de la galeria */
+#carrete {
+  height: 20%;
+  max-height: 80px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENEDOR de las imagenes de la galeria */
+.divCarrete {
+  width: 150px;
+  height: 100%;
+  margin-inline: 15px;
+  align-content: center;
+  padding: 5px;
+}
+
+/* IMAGENES de la galeria */
+.divCarrete img {
+  max-width: 100%;
+  max-height: 80px;
+  margin: 0px;
+}
+
+.fotoSelec {
+  border: 2px solid black;
+}
+
+/* BOTON CERRAR */
+.cerrar {
+  color: #aaaaaa;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* BOTON CERRAR - hover o focus */
+.cerrar:hover,
+.cerrar:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

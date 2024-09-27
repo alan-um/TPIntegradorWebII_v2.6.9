@@ -1,0 +1,20 @@
+{
+  "name": "tpintegradorwebii_v2.6.9",
+  "version": "1.0.0",
+  "description": "Proyecto integrador de la materia Web2, de la Tec. Univ. en Desarrollo de Software de la ULP.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon api/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alan J. Urquiza Manzanelli",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "node-google-translate-skidz": "^1.1.2"
+  }
+}

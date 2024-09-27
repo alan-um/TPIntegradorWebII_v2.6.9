@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+    <title>Integrador WEBII-TUDS - Alan J Urquiza Manzanelli</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+
+
+<body>
+    <header>
+        <div>
+            <h1>
+                Museo Metropolitano de NY
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="filtro">
+            <form onsubmit="return buscarDatos()" id="formu">
+                <div class="divFiltro">
+                    <label class="identificador">Departamento:</label><br>
+                    <select id="dptoSelect" class="valor" name="dptoSelect"></select>
+                </div>
+
+                <div class="divFiltro">
+                    <label class="identificador">Palabra clave:</label><br>
+                    <input type="text" id="clave" class="valor" name="clave">
+                </div>
+
+                <div class="divFiltro">
+                    <label class="identificador">Localización:</label><br>
+                    <select id="geoSelect" class="valor" name="geoSelect"></select>
+                </div>
+
+                <div>
+                    <button type="button" id="limpiar" class="buttonFiltro" onclick="limpiarForm()">Limpiar filtros</button>
+                </div>
+
+                <div>
+                    <button type="submit" id="buscar" class="buttonFiltro">Buscar!</button>
+                </div>
+            </form>
+        </section>
+
+        <div class="contenedor">
+            <div id="mensaje"></div>
+            <section id="grilla"></section>
+        </div>
+
+
+        <section id="paginas"></section>
+
+    </main>
+
+
+    <footer>
+        <img src="logoULP" title="ULP" width="150px">
+        <p><strong>Programación Web II</strong>
+            <br>TRABAJO PRÁCTICO INTEGRADOR
+            <br><i>Alan J. Urquiza Manzanelli</i>
+        </p>
+
+    </footer>
+
+    <!-- Ventana Modal -->
+    <div id="modalBox" class="modal"></div>
+
+</body>
+
+</html>
