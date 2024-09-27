@@ -360,7 +360,7 @@ const tamCarrete = 5; //Cant máx de imágenes que se muestran en el carrete
 
 function zoomModal(objectID) {
     //Solicita al server la imágen principal para mostrar según el Id del objeto
-    const URL_OBJ = `http://localhost:3000/obj/${objectID}`;
+    const URL_OBJ = `/obj/${objectID}`;
     axios(URL_OBJ)
         .then(response => {
             obj = response.data;
