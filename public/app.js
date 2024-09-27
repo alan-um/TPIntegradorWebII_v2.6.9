@@ -1,3 +1,7 @@
+//Al momento de probar algunas funciones he usado algunos console.log() para mostrar por consola datos que servian a modo de debug.
+//Ahora se encuentran comentados para que no se muestre esa información en la consola.
+
+
 //-----FUNCIONES QUE SE EJECUTAN AL CARGAR index.html------------------------------------------------------------------
 cargarSelectDpto();
 cargarSelectGeo();
@@ -48,7 +52,8 @@ function cargarSelectDpto() {
     axios("dpto")
         .then(response => {
             dptos = response.data.departments;
-            console.log(dptos);
+            //console.log(dptos);//Muestra el arreglo de dptos recibidos del server
+
             //Recorre el array de dptos y para cada uno crea el <option> con su ID y nombre
             for (let dpto of dptos) {
                 let op = document.createElement("option");
@@ -135,18 +140,18 @@ function buscarDatos() {
         try {
             axios(`/translate/${clave}`)
                 .then(response => {
-                    console.log(URL_BUSCAR += `q=${response.data}`);
+                    //console.log(URL_BUSCAR += `q=${response.data}`);//Muestra la URL que se usará para buscar en la API
                     pedirDatos(URL_BUSCAR += `q=${response.data}`);
                 })
         } catch {
             URL_BUSCAR += `q=""`;
-            console.log(URL_BUSCAR);
+            //console.log(URL_BUSCAR);  //Muestra la URL que se usará para buscar en la API
             pedirDatos(URL_BUSCAR);
         }
     }
     else {
         URL_BUSCAR += `q=""`;
-        console.log(URL_BUSCAR);
+        //console.log(URL_BUSCAR);//Muestra la URL que se usará para buscar en la API
         pedirDatos(URL_BUSCAR);
     }
 
@@ -157,7 +162,7 @@ function pedirDatos(URL_BUSCAR) {
     axios(URL_BUSCAR)
         .then(response => {
             datos = response.data;
-            console.log(datos);
+            //console.log(datos);//Muestra el arreglo de IDs de datos recibido desde  la API
             if (datos.total == 0) {
                 mensajeDatosNoEncontrados();
             } else {
@@ -199,7 +204,8 @@ function crearCard(objectID) {
     axios(URL_OBJ)
         .then(response => {
             obj = response.data;
-            console.log(obj);
+            //console.log(obj);//Muestra el objeto que buscó el server en la API, este objeto tiene los atributos que necesita 
+            //la App para funcionar, con los valores ya traducidos
             let onclickValor = "";
             let buttonValue = "Ampliar imagen principal";
             let buttonClass = "buttonFiltro";
@@ -327,7 +333,6 @@ function ultimaPagina(ultima) {
         mult -= 1;
     }
     inicioPaginas = mult * tamPaginas;
-    console.log(inicioPaginas);
     cargaGrilla(pag);
 }
 function paginaAnterior() {

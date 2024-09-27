@@ -1,7 +1,9 @@
+/*/////////----- ESTILO GENERAL DEL HTML -----//////////////////*/
 body {
   margin: 0px;
 }
 
+/* ENCABEZADO Y PIE DE PAGINA */
 header,
 footer {
   background-color: black;
@@ -11,6 +13,7 @@ footer {
   padding: 10px 0px;
 }
 
+/* SECCIÓN PRINCIPAL */
 main {
   min-height: 500px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -21,6 +24,7 @@ main {
   text-align: center;
 }
 
+/*/////////----- ESTILO DEL FILTRO DE BUSQUEDA -----//////////////////*/
 #filtro {
   text-align: center;
 }
@@ -34,6 +38,7 @@ main {
   margin: 20px;
 }
 
+/* CONTENIDO del filtro */
 .divFiltro {
   background-color: #aaaaaa;
   border-radius: 10px;
@@ -52,6 +57,7 @@ main {
   border: none;
 }
 
+/* BOTONES del filtro */
 .buttonFiltro {
   background-color: #aaaaaa;
   border-radius: 10px;
@@ -67,6 +73,7 @@ main {
   font-size: 14px;
 }
 
+/*/////////----- ESTILO DE CUADRO DE MENSAJES Y GRILLA -----//////////////////*/
 .contenedor {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 20px 15px;
@@ -80,6 +87,7 @@ strong {
   font-size: large;
 }
 
+/* ESTRUCTURA de la grilla */
 #grilla {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -88,6 +96,7 @@ strong {
   text-align: center;
 }
 
+/* CARDs donde se muestra la info de las obras encontradas */
 .card {
   background-color: rgb(211, 192, 173);
   width: 250px;
@@ -97,19 +106,20 @@ strong {
   align-content: flex-end;
 }
 
+/* CONTENEDOR de las imágenes de las CARDs */
 .divCard {
   width: 250px;
   height: 250px;
   align-content: center;
 }
 
-#grilla img,
-#unaImagen img {
+/* IMAGENES de la grilla */
+#grilla img {
   max-height: 100%;
   max-width: 100%;
 }
 
-
+/* CONTENEDOR de los cuadros que muestran los datos */
 .divDatos {
   background-color: #aaaaaa;
   border-radius: 10px;
@@ -122,12 +132,14 @@ strong {
   padding: 0px;
 }
 
+/* IDENTIFICARDOR de los datos */
 .identificador {
   margin: 0px;
   font-size: 10px;
   padding: 1px;
 }
 
+/* VALORES de los datos */
 .valor {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -138,6 +150,8 @@ strong {
   font-size: 14px;
 }
 
+
+/*/////////----- ESTILO DE LOS BOTONES DE PAGINADO -----//////////////////*/
 #paginas {
   text-align: center;
   padding: 15px;

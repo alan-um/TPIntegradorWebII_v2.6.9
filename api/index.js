@@ -70,9 +70,7 @@ app.get("/obj/:id", (req, res) => {
     fetch(URL_OBJ + `/${req.params.id}`)
         .then((response) => response.json())
         .then((data) => {
-            console.log("data");
-            if (Object.keys(data) == 'message') {
-                console.log("ERROR!!!!!!!!!!! JSON vacío!");
+            if (Object.keys(data) == 'message') {//Detecta cuando el ID que indica la API, no es un objeto válido.
                 obj.title = "No es un objeto válido<br>Error de la API";
                 res.send(obj);
             } else {
@@ -89,7 +87,7 @@ app.get("/obj/:id", (req, res) => {
                 if (data.dynasty != "") objToTrans.d = data.dynasty;
                 if (data.objectDate != "") objToTrans.f = data.objectDate;
                 let textToTrans = JSON.stringify(objToTrans);
-                console.log(textToTrans);
+                //console.log(textToTrans);//Imprime el texto a traducir
 
                 try {
                     translate({
@@ -109,7 +107,7 @@ app.get("/obj/:id", (req, res) => {
                     });
                 }
                 catch (error) {
-                    console.log(error);
+                    console.log(error);//Indica el error en la traduccion
                     res.send(obj);
                 }
             }
