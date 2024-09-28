@@ -280,3 +280,9 @@ strong {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+#contenedor404{
+  text-align: center;
+  padding: 100px;
+}

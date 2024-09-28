@@ -35,6 +35,9 @@ app.get("/logoULP", (req, res) => {
 app.get("/sinImagen", (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'img', 'sinImagen.png'));
 });
+app.get("/error404", (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'img', 'error404.png'));
+});
 
 
 //Solicitud de DPTOS
@@ -130,7 +133,7 @@ app.get("/translate/:clave", (req, res) => {
 
 //Solicitudes de páginas erróneas
 app.get("/*", (req, res) => {
-    res.send("Velo!!");
+    res.status(404).sendFile(path.join(__dirname, '..', 'public', 'noEncontrado.html'));
 });
 
 //

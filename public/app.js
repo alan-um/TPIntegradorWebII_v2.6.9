@@ -107,7 +107,7 @@ function cargarSelectGeo() {
         <option value="Venezuela">Venezuela</option>
         <option value="Washington">Washington</option>`;
 
-    document.getElementById("geoSelect").innerHTML=html;
+    document.getElementById("geoSelect").innerHTML = html;
 }
 
 function limpiarForm() {
@@ -465,7 +465,7 @@ function actualizaCarrete() {
 function selecFoto(index) {
     indexFotoSelec = index;
     document.getElementById("imgPrincipal").innerHTML =
-        `<img src=${fotosCarrete[indexFotoSelec]}>`;
+        `<img src=${fotosCarrete[indexFotoSelec]} title="${obj.title} - ${obj.objectDate}">`;
 
     let carrete = document.querySelectorAll(".divCarrete");
     carrete.forEach((div) => {
